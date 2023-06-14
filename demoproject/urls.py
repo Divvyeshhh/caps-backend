@@ -16,8 +16,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from DemoApp.views import home
+from DemoApp.views import *
+
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path('home/',home)
+    path('home/',home),
+    path('', dependantfield, name="dependantfield"),
+    path('get-states/', get_states, name="get_states"),
+    path('get-cities/', get_cities, name="get_cities"),
+    path('get-business/', get_business, name="get_business"),
+    path('get-packages/', get_package, name="get_package"),
 ]

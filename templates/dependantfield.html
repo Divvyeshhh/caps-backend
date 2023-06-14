@@ -1,0 +1,25 @@
+{% load static %}
+
+<form>
+  <label>Sub-division:</label>
+  <select id="country" name="country" style="width:50%">
+    <option value="0">Select a sub-division</option>
+    {% for i in country %}
+          <option value="{{i.id}}">{{i.name}}</option>
+    {% endfor %}
+  </select>
+  <br><br>
+  <label>Police station:</label>
+  <select id="state" name="state"></select>
+  <br><br>
+  <label>Mother village:</label>
+  <select id="city" name="city"></select>
+  <br><br>
+  <label>Hamlet village:</label>
+  <select id="business" name="business"></select>
+  <br><br>
+  <label>Packages:</label>
+  <select id="packages" name="packages"></select>
+</form>
+<script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+<script src="{% static 'js/dependant.js' %}"></script>
